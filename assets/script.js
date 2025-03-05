@@ -17,33 +17,3 @@ const slides = [
 	}
 ]
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Vérifier si les flèches existent dans le DOM
-    const arrowLeft = document.querySelector(".arrow-left");
-    const arrowRight = document.querySelector(".arrow-right");
-
-    console.log("Flèche gauche :", arrowLeft);
-    console.log("Flèche droite :", arrowRight);
-
-    // Vérifier leur position
-    if (arrowLeft) {
-        console.log("Position gauche:", arrowLeft.getBoundingClientRect());
-    }
-    if (arrowRight) {
-        console.log("Position droite:", arrowRight.getBoundingClientRect());
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const arrowLeft = document.querySelector(".arrow-left");
-    const arrowRight = document.querySelector(".arrow-right");
-
-    if (arrowRight) {
-        // Vérifie si la flèche est bien visible à l'écran
-        if (arrowRight.getBoundingClientRect().x < 0) {
-            console.log("⚠️ Flèche droite hors écran ! Ajustement...");
-            arrowRight.style.right = "10px"; // Essaie de forcer une valeur visible
-        }
-    }
-});
